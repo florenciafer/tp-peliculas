@@ -5,8 +5,14 @@ import DetailPage from "./pages/DetailPage";
 import InfoPage from "./pages/InfoPage";
 
 function App() {
+  // switch(url)
+  // case "/": home
+  //Router  url setUrl useState
+  // link onClick={setUrl(/)}
   return (
     <Router>
+      <Header/>
+  
       <Switch>
         <Route exact path="/" component={Home}></Route>
         <Route exact path="/detailpage" component={DetailPage}></Route>
