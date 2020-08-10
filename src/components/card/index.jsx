@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = () => {
   return (
-    <div className="card-container">
+    <div className="card">
       <div className="card-image-container">
         <img
           className="card-image"
