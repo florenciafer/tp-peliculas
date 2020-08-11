@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import DetailPage from "./pages/DetailPage";
 import InfoPage from "./pages/InfoPage";
+import Header from "./components/Header";
 
 function App() {
   // switch(url)
@@ -11,8 +12,8 @@ function App() {
   // link onClick={setUrl(/)}
   return (
     <Router>
-      <Header/>
-  
+      <Header />
+
       <Switch>
         <Route exact path="/" component={Home}></Route>
         <Route exact path="/detailpage" component={DetailPage}></Route>

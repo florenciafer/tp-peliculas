@@ -1,10 +1,9 @@
 import React from "react";
-import Search from "./";
 
 const Header = () => {
   return (
     <div>
-      <Search />
+      <h1>Hola</h1>
     </div>
   );
 };
