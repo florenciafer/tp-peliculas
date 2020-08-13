@@ -1,23 +1,57 @@
-import React from 'react';
-import CardContainer from "../components/Card-Container";
-/* import Axios from "axios"; */
+import React, { useState, useEffect } from 'react';
+import useGet from "../../utils/hooks/useGet";
+import Axios from "axios";
+import CardContainer from '../Card-Container';
+import { URL_BASE } from "../../constantes/apiConfig";
 
 
-const CategoryPreview = () {
-    /* const { media, category, page } = useParams();
-    const [isLoading, setIsLoading] = useState(false);
-    const [isError, setIsError] = useState(false);
-    const [data, setData] = useState(null);
-    useEffect(() => {
-        setIsLoading(true);
-        Axios.get()
 
-    }) */
-    return (
-        <div>
-            <CardContainer />
-        </div>
-    )
+const CategoryPreview = ({ media, category }) => {
+    /*   const { media, category, page } = useParams(); */
+
+    const apikey = `api_key=93154d19eed0f495c972270d93704d7f`;
+
+    const createURL = () => {
+        if (category == "trending") {
+            return `${URL_BASE}${category}/${media}/week?api_key=${process.env.REACT_APP_API_KEY}`;
+        }
+        return `${URL_BASE}${media}/${category}?api_key=${process.env.REACT_APP_API_KEY}`;
+    }
+
+    const [data, loading, error] = useGet(createURL())
+
+    /*   useEffect(() => {
+          setIsLoading(true);
+          Axios.get(createURL())
+              .then((results) => {
+                  setData(results.data);
+                  console.log(results.data)
+                  setIsLoading(false);
+              })
+              .catch((error) => {
+                  setIsError(true);
+                  setIsLoading(false);
+              })
+      }, []); */
+    if (loading) {
+        return (<h1> cargando...</h1>)
+    }
+    if (data) {
+        return (
+            /*   <Link to={`/${media}/${category}/page/1`}>
+                  <h1>
+                      {media} - {category}
+                  </h1>
+              </Link> */
+
+            <div>
+                <CardContainer cards={data.results.slice(0, 5)} />
+            </div>
+        )
+    }
+    return null;
 }
 
-export default index
+
+
+export default CategoryPreview;
