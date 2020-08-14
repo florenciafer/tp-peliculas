@@ -3,6 +3,10 @@ import useGet from "../../utils/hooks/useGet";
 import Axios from "axios";
 import CardContainer from '../Card-Container';
 import { URL_BASE } from "../../constantes/apiConfig";
+import { FiArrowRight } from "react-icons/fi";
+import useTitle from "../../utils/hooks/useTitle";
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -19,6 +23,7 @@ const CategoryPreview = ({ media, category }) => {
     }
 
     const [data, loading, error] = useGet(createURL())
+    const title = useTitle(media, category);
 
     /*   useEffect(() => {
           setIsLoading(true);
@@ -45,6 +50,11 @@ const CategoryPreview = ({ media, category }) => {
               </Link> */
 
             <div>
+                <Link className="card-container-title">
+
+                    {title}
+                    <FiArrowRight className="arrow" />
+                </Link>
                 <CardContainer cards={data.results.slice(0, 5)} />
             </div>
         )

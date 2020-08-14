@@ -4,6 +4,8 @@ import Home from "./pages/Home";
 import DetailPage from "./pages/DetailPage";
 import InfoPage from "./pages/InfoPage";
 import Header from "./components/Header";
+import Movie from "./pages/Movie";
+import Tv from "./pages/tv";
 
 function App() {
   // switch(url)
@@ -16,8 +18,10 @@ function App() {
 
       <Switch>
         <Route exact path="/" component={Home}></Route>
-        <Route exact path="/detailpage" component={DetailPage}></Route>
-        <Route exact path="/infopage" component={InfoPage}></Route>
+        <Route exact path="/movie" component={Movie}></Route>
+        <Route exact path="/tv" component={Tv}></Route>
+        {/*  <Route exact path="/:media/:category/page/:page"><Category /></Route> */}
+
       </Switch>
     </Router>
   );

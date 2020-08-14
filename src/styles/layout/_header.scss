@@ -21,3 +21,16 @@ margin-left: 0.5rem;
     margin-left: 0.5rem;
 
 }
+.container-header{
+  display: flex;
+}
+.navBar{
+  display: flex;
+  width: 20vw;
+  justify-content: space-around;
+}
+.icon-NavBar{
+  font-size: 2rem;
+  color:hsl(210, 3%, 87%);
+
+}
