@@ -5,6 +5,7 @@
 }
 .card-wrapper {
   display: flex;
+  flex-wrap: wrap;
 }
 .card-container-title {
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;

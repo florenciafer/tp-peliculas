@@ -13,7 +13,6 @@ import { Link } from 'react-router-dom';
 const CategoryPreview = ({ media, category }) => {
     /*   const { media, category, page } = useParams(); */
 
-    const apikey = `api_key=93154d19eed0f495c972270d93704d7f`;
 
     const createURL = () => {
         if (category == "trending") {
@@ -55,7 +54,7 @@ const CategoryPreview = ({ media, category }) => {
                     {title}
                     <FiArrowRight className="arrow" />
                 </Link>
-                <CardContainer cards={data.results.slice(0, 5)} />
+                <CardContainer cards={data.results.slice(0, 5)} media={media} />
             </div>
         )
     }

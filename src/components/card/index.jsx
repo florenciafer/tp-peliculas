@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Card = ({ img, title }) => {
+const Card = ({ img, title, id, media }) => {
   return (
-    <div className="card">
+    <Link to={`/${media}/${id}/info`} className="card">
       <div className="card-image-container">
         <img
           className="card-image"
@@ -13,7 +14,7 @@ const Card = ({ img, title }) => {
       </div>
 
       <h1 className="card-title">{title}</h1>
-    </div>
+    </Link>
   );
 };
 export default Card;

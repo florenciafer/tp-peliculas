@@ -1,4 +1,5 @@
 import React from "react";
+import { Route } from "react-router-dom";
 
 const Details = () => {
   return (
@@ -9,12 +10,14 @@ const Details = () => {
           alt="imagen details"
         />
       </div>
+
       <div clasName="nav-bar-detail">
         <button className="nav-bar-detail-text">Info</button>
         <button className="nav-bar-detail-text">Reparto</button>
         <button className="nav-bar-detail-text">Videos</button>
         <button className="nav-bar-detail-text">Similares</button>
       </div>
+      <Route>info</Route>
     </div>
   );
 };
