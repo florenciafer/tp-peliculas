@@ -50,7 +50,7 @@ const CategoryPreview = ({ media, category }) => {
               </Link> */
 
             <div>
-                <Link className="card-container-title">
+                <Link to={`/${media}/${category}/page/1`} className="card-container-title">
 
                     {title}
                     <FiArrowRight className="arrow" />

@@ -9,9 +9,8 @@ const Home = () => {
   // voy a usar useEffect y axios para consumir la api
   return (
     <div>
-
       <CategoryPreview media="movie" category="trending" />
-      <CategoryPreview category="popular" media="tv" />
+      <CategoryPreview media="tv" category="trending" />
 
     </div>
   );

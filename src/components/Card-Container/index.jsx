@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "../card";
-import { FiArrowRight } from "react-icons/fi";
 
 const CardContainer = ({ cards }) => {
   return (

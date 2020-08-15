@@ -6,6 +6,8 @@ import InfoPage from "./pages/InfoPage";
 import Header from "./components/Header";
 import Movie from "./pages/Movie";
 import Tv from "./pages/tv";
+import Category from "./components/Category";
+
 
 function App() {
   // switch(url)
@@ -20,7 +22,7 @@ function App() {
         <Route exact path="/" component={Home}></Route>
         <Route exact path="/movie" component={Movie}></Route>
         <Route exact path="/tv" component={Tv}></Route>
-        {/*  <Route exact path="/:media/:category/page/:page"><Category /></Route> */}
+        <Route exact path="/:media/:category/page/:page"><Category /></Route>
 
       </Switch>
     </Router>
