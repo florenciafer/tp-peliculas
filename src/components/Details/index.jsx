@@ -1,7 +1,18 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Link, useRouteMatch, useParams } from "react-router-dom";
+import Info from "../Info";
+import Reparto from "../Reparto";
+import Videos from "../Videos";
+import Similares from "../Similares";
+import Season from "../season/Season";
 
 const Details = () => {
+
+  let { path, url } = useRouteMatch();
+  const { media } = useParams();
+  const seleccionDetail = media === "movie" ? { url: "videos", title: "VIDEOS", path: <Videos></Videos> } : { url: "season", title: "EPISODIOS", path: <Season></Season> };
+
+
   return (
     <div className="details-hero">
       <div>
@@ -10,16 +21,19 @@ const Details = () => {
           alt="imagen details"
         />
       </div>
-
       <div clasName="nav-bar-detail">
-        <button className="nav-bar-detail-text">Info</button>
-        <button className="nav-bar-detail-text">Reparto</button>
-        <button className="nav-bar-detail-text">Videos</button>
-        <button className="nav-bar-detail-text">Similares</button>
+        <Link to={`${url}/info`} className="nav-bar-detail-text">Info</Link>
+        <Link to={`${url}/cast`} className="nav-bar-detail-text">Reparto</Link>
+        <Link to={`${url}/${seleccionDetail.url}`} className="nav-bar-detail-text">{seleccionDetail.title}</Link>
+        <Link to={`${url}/similares`} className="nav-bar-detail-text">Similares</Link>
       </div>
-      <Route>info</Route>
+      <Route path={`${path}/info`}><Info></Info></Route>
+      <Route path={`${path}/cast`}><Reparto></Reparto></Route>
+      <Route path={`${path}/${seleccionDetail.url}`}>{seleccionDetail.path}</Route>
+      <Route path={`${path}/similares`}><Similares></Similares></Route>
     </div>
   );
+
 };
 
 export default Details;

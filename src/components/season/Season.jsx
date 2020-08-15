@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Similares = () => {
+const Season = () => {
     return (
         <div>
-            <h1>Hola</h1>
+            <h1>Season</h1>
         </div>
     )
 }
 
-export default Similares
+export default Season
