@@ -19,14 +19,14 @@ const Details = () => {
       <div>
         <div>
           <img
-            src={`https://image.tmdb.org/t/p/original/${data.backdrop_path}`} class="sc-gisBJw dQRmGb"
+            src={`https://image.tmdb.org/t/p/original/${data.backdrop_path}`} class="detail-bg"
             alt="imagen details" />
         </div>
         <div className="nav-bar-detail">
-          <Link to={`${url}/info`} className="nav-bar-detail-text">info</Link>
-          <Link to={`${url}/cast`} className="nav-bar-detail-text">Reparto</Link>
+          <Link to={`${url}/info`} className="nav-bar-detail-text">INFO</Link>
+          <Link to={`${url}/cast`} className="nav-bar-detail-text">REPARTO</Link>
           <Link to={`${url}/${seleccionDetail.url}`} className="nav-bar-detail-text">{seleccionDetail.title}</Link>
-          <Link to={`${url}/similares`} className="nav-bar-detail-text">Similares</Link>
+          <Link to={`${url}/similares`} className="nav-bar-detail-text">SIMILARES</Link>
         </div>
         <Route path={`${path}/info`}><Info media={media}
           id={id}
