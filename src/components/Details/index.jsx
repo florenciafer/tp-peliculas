@@ -11,7 +11,7 @@ const Details = () => {
 
   const { path, url } = useRouteMatch();
   const { media, id } = useParams();
-  const seleccionDetail = media === "movie" ? { url: "videos", title: "VIDEOS", path: <Videos></Videos> } : { url: "season", title: "EPISODIOS", path: <Season></Season> };
+  const seleccionDetail = media === "movie" ? { url: "videos", title: "VIDEOS", path: <Videos media={media} id={id}  ></Videos> } : { url: "season", title: "EPISODIOS", path: <Season></Season> };
   const [data] = useDetail(media, id)
 
   return (
@@ -31,7 +31,7 @@ const Details = () => {
         <Route path={`${path}/info`}><Info media={media}
           id={id}
         ></Info></Route>
-        <Route path={`${path}/cast`}><Reparto></Reparto></Route>
+        <Route path={`${path}/cast`}><Reparto media={media} id={id}></Reparto></Route>
         <Route path={`${path}/${seleccionDetail.url}`}>{seleccionDetail.path}</Route>
         <Route path={`${path}/similares`}><Similares></Similares></Route>
       </div>

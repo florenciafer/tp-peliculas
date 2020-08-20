@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Card = ({ img, title, id, media }) => {
+const Card = ({ img, title, id, media, subtitle }) => {
+
   return (
-    <Link to={`/${media}/${id}/`} className="card">
+    <Link to={`/${media}/${id}/info`} className="card">
       <div className="card-image-container">
         <img
           className="card-image"
@@ -14,6 +15,7 @@ const Card = ({ img, title, id, media }) => {
       </div>
 
       <h1 className="card-title">{title}</h1>
+      {subtitle && <h2>{subtitle}</h2>}
     </Link>
   );
 };
