@@ -9,6 +9,24 @@ import { URL_BASE } from "../../constantes/apiConfig";
 
 const Category = () => {
   const createURL = () => {
+    /* 
+      media,category
+    {tv,movie},tags5
+    {tv,moive},trending1
+    multi,seacrh
+
+
+    uurl1 }${category}/,${media}/week?
+    url2 }${media}/${category}
+    url3 multi/search
+
+   
+    
+    */
+    if (media === "multi") {
+      return `${URL_BASE}search/multi?api_key=${process.env.REACT_APP_API_KEY}&query=${category}`;
+    }
+
     if (category == "trending") {
       return `${URL_BASE}${category}/${media}/week?api_key=${process.env.REACT_APP_API_KEY}`;
     }

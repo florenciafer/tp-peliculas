@@ -11,15 +11,19 @@ const Details = () => {
 
   const { path, url } = useRouteMatch();
   const { media, id } = useParams();
-  const seleccionDetail = media === "movie" ? { url: "videos", title: "VIDEOS", path: <Videos media={media} id={id}  ></Videos> } : { url: "season", title: "EPISODIOS", path: <Season></Season> };
+  const seleccionDetail = media === "movie"
+    ? { url: "videos", title: "VIDEOS" }
+    : { url: "seasons/1", title: "EPISODIOS" };
+
   const [data] = useDetail(media, id)
+
 
   return (
     <div className="details-hero" >{data &&
       <div>
         <div>
           <img
-            src={`https://image.tmdb.org/t/p/original/${data.backdrop_path}`} class="detail-bg"
+            src={`https://image.tmdb.org/t/p/original/${data.backdrop_path}`} className="detail-bg"
             alt="imagen details" />
         </div>
         <div className="nav-bar-detail">
@@ -32,8 +36,13 @@ const Details = () => {
           id={id}
         ></Info></Route>
         <Route path={`${path}/cast`}><Reparto media={media} id={id}></Reparto></Route>
-        <Route path={`${path}/${seleccionDetail.url}`}>{seleccionDetail.path}</Route>
-        <Route path={`${path}/similares`}><Similares></Similares></Route>
+        <Route exact path={`${url}/seasons/:season`}>
+          <Season seasons={data.seasons} id={id} />
+        </Route>
+        <Route exact path={`${url}/videos`}>
+          <Videos media={media} id={id} />
+        </Route>
+        <Route path={`${path}/similares`}><Similares media={media} id={id}></Similares></Route>
       </div>
 
     }
