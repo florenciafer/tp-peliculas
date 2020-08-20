@@ -10,29 +10,36 @@ import { URL_BASE } from "../../constantes/apiConfig";
 const Category = () => {
   const createURL = () => {
     /* 
-      media,category
+      media,category,searchParam
     {tv,movie},tags5
     {tv,moive},trending1
     multi,seacrh
-
+     {tv,movie},tags10,id10
 
     uurl1 }${category}/,${media}/week?
     url2 }${media}/${category}
     url3 multi/search
+    url4 genero
 
    
     
     */
+    if (searchParam) {
+      console.log(searchParam)
+      //&with_genres=10765
+
+      return `${URL_BASE}discover/${media}?api_key=${process.env.REACT_APP_API_KEY}&with_genres=${searchParam}`;
+    }
     if (media === "multi") {
       return `${URL_BASE}search/multi?api_key=${process.env.REACT_APP_API_KEY}&query=${category}`;
     }
 
-    if (category == "trending") {
+    if (category === "trending") {
       return `${URL_BASE}${category}/${media}/week?api_key=${process.env.REACT_APP_API_KEY}`;
     }
     return `${URL_BASE}${media}/${category}?api_key=${process.env.REACT_APP_API_KEY}`;
   }
-  const { media, category } = useParams();
+  const { media, category, searchParam } = useParams();
   const title = useTitle(media, category);
   const [data, loading, error] = useGet(createURL());
 
@@ -43,7 +50,7 @@ const Category = () => {
     return (
 
       <div className="category-container">
-        <h1 className="card-container-title">{title}</h1>
+        <h1 className="card-container-title">{searchParam ? `Genero - ${category}` : title}</h1>
         <CardContainer className="category" cards={data.results} media={media} />
       </div>
     )

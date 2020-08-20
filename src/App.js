@@ -8,6 +8,7 @@ import Movie from "./pages/Movie";
 import Tv from "./pages/tv";
 import Category from "./components/Category";
 import Details from "./components/Details";
+import Person from "./pages/Person";
 
 
 function App() {
@@ -24,7 +25,10 @@ function App() {
         <Route exact path="/movie" component={Movie}></Route>
         <Route exact path="/tv" component={Tv}></Route>
         <Route exact path="/:media/:category/page/:page"><Category /></Route>
+        <Route exact path="/:media/:category/:searchParam/page/:page"><Category /></Route>
+        <Route path="/person/:id"><Person /></Route>
         <Route path="/:media/:id"><Details /></Route>
+
       </Switch>
     </Router>
   );

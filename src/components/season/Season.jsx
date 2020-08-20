@@ -1,11 +1,13 @@
 import React from 'react'
 import useDetail from '../../utils/hooks/useDetail'
 import { useHistory, useParams } from 'react-router-dom';
+import EspisodeCard from '../EpisodeCard'
 
 const Season = ({ id, seasons }) => {
     const { season } = useParams();
     const history = useHistory();
     const [data] = useDetail("tv", id, `season/${season}`)
+    console.log(data)
 
     const onSelect = (event) => {
         console.log("temporadaseleccionada", event.target.value)
@@ -13,6 +15,7 @@ const Season = ({ id, seasons }) => {
 
     }
     if (data) {
+
         return (
             <div>
 
@@ -26,6 +29,13 @@ const Season = ({ id, seasons }) => {
                         </option>
                     })}
                 </select>
+                {data.episodes.map(episodio => {
+                    return <EspisodeCard key={episodio.id}
+                        img={episodio.still_path}
+                        overview={episodio.overview}
+                        title={episodio.name}
+                        episodeNumber={episodio.episode_number} />
+                })}
             </div>
         )
     }

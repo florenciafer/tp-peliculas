@@ -1,6 +1,7 @@
 import React from "react";
 import useDetail from "../../utils/hooks/useDetail";
 import ExternalLinks from '../ExternalLink'
+import { Link } from "react-router-dom";
 
 const Info = ({ media, id }) => {
   const [data] = useDetail(media, id)
@@ -15,13 +16,13 @@ const Info = ({ media, id }) => {
       </p>
       <p className="info-description">Duración:{data.runtime} min</p>
       <ul className="info-description">
-        Géneros: {data.genres.map(g => <li className="info-genero" key={g.id}>{g.name}</li>)}</ul>
+        Géneros: {data.genres.map(g => <Link to={`/${media}/${g.name}/${g.id}/page/1`} className="info-genero" key={g.id} > {g.name}</Link>)}</ul>
       <p className="info-description">Presupuesto:{data.budget}</p>
       <p className="info-description">Recaudación:{data.revenue}</p>
       <p className="info-description">Producción:{data.production_companies.map(production => <li className="info-production" key={production.id}>{production.name}</li>)}</p>
       <div> <ExternalLinks media={media} id={id} /></div>
     </div>}
-  </div>
+  </div >
 
 
   )
