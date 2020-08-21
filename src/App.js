@@ -8,7 +8,7 @@ import Movie from "./pages/Movie";
 import Tv from "./pages/tv";
 import Category from "./components/Category";
 import Details from "./components/Details";
-import Person from "./pages/Person";
+import Person from "./pages/persons/Person";
 
 
 function App() {
