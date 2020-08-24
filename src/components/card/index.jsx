@@ -15,7 +15,7 @@ const Card = ({ img, title, id, media, subtitle }) => {
       </div>
 
       <h1 className="card-title">{title}</h1>
-      {subtitle && <h2>{subtitle}</h2>}
+      {subtitle && <h2 className="card-title">{subtitle}</h2>}
     </Link>
   );
 };

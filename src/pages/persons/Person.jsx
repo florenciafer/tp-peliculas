@@ -9,8 +9,8 @@ import Credits from '../persons/section/Credits';
 const Person = ({ media }) => {
     const { id } = useParams();
     const { path, url } = useRouteMatch();
-    /*    const [data] = useDetail("person", id, "combined_credits");
-       const [infoPerson] = useDetail("person", id,); */
+    /*     const [data] = useDetail("person", id, "combined_credits"); */
+    /*     const [infoPerson] = useDetail("person", id,); */
     return (
         <div>
             <div>
@@ -18,9 +18,8 @@ const Person = ({ media }) => {
                 <Link to={`${url}/credits`}>CREDITOS</Link>
             </div>
             <Switch>
-                <Route path={`${path}/info`}><InfoPerson media={media}
-                    id={id}></InfoPerson></Route>
-                <Route path={`${path}/credits`}><Credits></Credits></Route>
+                <Route path={`${path}/info`}><InfoPerson media={media} id={id}></InfoPerson></Route>
+                <Route path={`${path}/credits`}><Credits media={media} id={id}></Credits></Route>
             </Switch>
 
 

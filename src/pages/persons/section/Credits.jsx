@@ -1,11 +1,14 @@
 import React from 'react'
-
-const credits = () => {
-    return (
-        <div>
-            <h1>hola</h1>
-        </div>
-    )
+import CardContainer from '../../../components/Card-Container';
+import useDetail from '../../../utils/hooks/useDetail';
+const Credits = ({ id }) => {
+    const [credits] = useDetail("person", id, "combined_credits");
+    console.log(credits)
+    if (credits) {
+        return (
+            <CardContainer cards={credits.cast} media="person" />)
+    }
+    return null
 }
 
-export default credits
+export default Credits

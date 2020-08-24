@@ -1,7 +1,7 @@
 import React from "react";
 import useDetail from "../../utils/hooks/useDetail";
-import ExternalLinks from '../ExternalLink'
 import { Link } from "react-router-dom";
+import ExternalLinks from "../ExternalLink";
 
 const Info = ({ media, id }) => {
   const [data] = useDetail(media, id)

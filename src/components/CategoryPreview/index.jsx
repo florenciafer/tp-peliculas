@@ -48,7 +48,7 @@ const CategoryPreview = ({ media, category }) => {
                   </h1>
               </Link> */
 
-            <div>
+            <div className="category-container">
                 <Link to={`/${media}/${category}/page/1`} className="card-container-title">
 
                     {title}
