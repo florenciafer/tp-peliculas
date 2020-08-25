@@ -6,6 +6,7 @@ import { URL_BASE } from "../../constantes/apiConfig";
 import { FiArrowRight } from "react-icons/fi";
 import useTitle from "../../utils/hooks/useTitle";
 import { Link } from 'react-router-dom';
+import Paginado from '../Paginado';
 
 
 
@@ -15,7 +16,7 @@ const CategoryPreview = ({ media, category }) => {
 
 
     const createURL = () => {
-        if (category == "trending") {
+        if (category === "trending") {
             return `${URL_BASE}${category}/${media}/week?api_key=${process.env.REACT_APP_API_KEY}`;
         }
         return `${URL_BASE}${media}/${category}?api_key=${process.env.REACT_APP_API_KEY}`;
@@ -55,6 +56,7 @@ const CategoryPreview = ({ media, category }) => {
                     <FiArrowRight className="arrow" />
                 </Link>
                 <CardContainer cards={data.results.slice(0, 5)} media={media} />
+
             </div>
         )
     }
