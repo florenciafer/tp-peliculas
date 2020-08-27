@@ -10,21 +10,7 @@ import Paginado from "../Paginado";
 
 const Category = () => {
   const createURL = () => {
-    /* 
-      media,category,searchParam
-    {tv,movie},tags5
-    {tv,moive},trending1
-    multi,seacrh
-     {tv,movie},tags10,id10
 
-    uurl1 }${category}/,${media}/week?
-    url2 }${media}/${category}
-    url3 multi/search
-    url4 genero
-
-   
-    
-    */
     if (searchParam) {
       console.log(searchParam)
       //&with_genres=10765

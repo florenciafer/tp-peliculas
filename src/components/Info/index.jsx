@@ -14,11 +14,11 @@ const Info = ({ media, id }) => {
       <p className="info-description">
         {data.overview}
       </p>
-      <p className="info-description">Duración:{data.runtime} min</p>
+      <p className="info-description">{data.runtime} min</p>
       <ul className="info-description">
         Géneros: {data.genres.map(g => <Link to={`/${media}/${g.name}/${g.id}/page/1`} className="info-genero" key={g.id} > {g.name}</Link>)}</ul>
-      <p className="info-description">Presupuesto:{data.budget}</p>
-      <p className="info-description">Recaudación:{data.revenue}</p>
+      <p className="info-description">Presupuesto:{data.budget ? "$" + data.budget : "$0"}</p>
+      <p className="info-description">Recaudación:{data.revenue ? "$" + data.renevue : "$0"}</p>
       <p className="info-description">Producción:{data.production_companies.map(production => <li className="info-production" key={production.id}>{production.name}</li>)}</p>
       <div> <ExternalLinks media={media} id={id} /></div>
     </div>}

@@ -3,13 +3,16 @@ import { Link } from "react-router-dom";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 const getItems = (current, totalPages, getUrl) => {
   console.log(current)
-  const offset = 2;
+  const offset = Number(2);
   const aux = [];
 
-  let upperlimit = totalPages - offset > current ? current + offset : totalPages;
-
   let lowerLimit = current - offset > 0 ? current - offset : 1;
-  // 1 -2
+  //  Limite Inferior  23-2 > 0 ?23-2 =21 :1  
+
+
+  let upperlimit = totalPages - offset > current ? Number(current) + offset : totalPages;
+  //limite superior 1000-2 es mayor 23:25: 1000
+
   if (upperlimit - current - offset < 0) {
     upperlimit -= lowerLimit + offset - current;
   }
@@ -17,7 +20,7 @@ const getItems = (current, totalPages, getUrl) => {
     upperlimit += lowerLimit + offset - current;
   }
   for (let indice = lowerLimit; indice <= upperlimit; indice++) {
-    // 
+
     aux.push(<Link to={getUrl(indice)}>{indice}</Link>);
 
   }
@@ -31,7 +34,9 @@ const Paginado = ({ media, category, page, totalPages }) => {
 
 
   const before = page > 1 ? getUrl(Number(page) - 1) : null;
+  // 2 > 2 - 1  = 1 
   const next = page <= totalPages ? getUrl(Number(page) + 1) : null;
+  // 2 => 2+1 = 3 :NULL 
   const items = getItems(page, totalPages, getUrl)
   return <div>
     {before && <Link to={before} > <AiOutlineArrowLeft className="arrow-Paginado" />anterior</Link>}
