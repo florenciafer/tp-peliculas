@@ -9,13 +9,13 @@ const Season = ({ id, seasons }) => {
     const [data] = useDetail("tv", id, `season/${season}`)
     console.log(data)
 
+
     const onSelect = (event) => {
         console.log("temporadaseleccionada", event.target.value)
         history.push(`/tv/${id}/seasons/${event.target.value}`)
 
     }
     if (data) {
-
         return (
             <div>
 

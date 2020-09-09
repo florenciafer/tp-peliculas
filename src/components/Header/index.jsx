@@ -5,8 +5,9 @@ import NavBar from "../NavBar";
 const Header = () => {
   return (
     <div className="container-header">
-      <NavBar />
       <Search />
+
+      <NavBar />
     </div>
   );
 };

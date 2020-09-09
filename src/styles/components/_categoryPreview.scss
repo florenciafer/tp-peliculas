@@ -1,0 +1,21 @@
+.categoryPreview-container{
+    max-width: 1400px;
+    width: 100%;
+    padding-top: 2.5em;
+}
+.categoryPreview-title {
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  text-decoration: none ;
+  font-size: 1.2rem;
+  color: rgb(220, 221, 222);
+  margin: 1.5rem 0 1.5rem 2rem;
+   
+}
+.categoryPreview-arrow{
+  color: hsl(207, 90%, 54%);
+  display:inline-block;
+  vertical-align: middle;
+  margin-left:0.4rem;
+  
+}

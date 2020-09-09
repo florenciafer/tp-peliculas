@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import useGet from "../../utils/hooks/useGet";
-import Axios from "axios";
 import CardContainer from '../Card-Container';
 import { URL_BASE } from "../../constantes/apiConfig";
 import { FiArrowRight } from "react-icons/fi";
 import useTitle from "../../utils/hooks/useTitle";
 import { Link } from 'react-router-dom';
-import Paginado from '../Paginado';
+import useBreakpoint from '../../utils/hooks/useBreakpoint';
+
 
 
 
 
 const CategoryPreview = ({ media, category }) => {
-    /*   const { media, category, page } = useParams(); */
 
+    const breackpoint = useBreakpoint();//cortamos las cards segun su withd que sacamos de use responsive
 
     const createURL = () => {
         if (category === "trending") {
@@ -22,40 +22,22 @@ const CategoryPreview = ({ media, category }) => {
         return `${URL_BASE}${media}/${category}?api_key=${process.env.REACT_APP_API_KEY}`;
     }
 
-    const [data, loading, error] = useGet(createURL())
+    const [data, loading] = useGet(createURL())
     const title = useTitle(media, category);
 
-    /*   useEffect(() => {
-          setIsLoading(true);
-          Axios.get(createURL())
-              .then((results) => {
-                  setData(results.data);
-                  console.log(results.data)
-                  setIsLoading(false);
-              })
-              .catch((error) => {
-                  setIsError(true);
-                  setIsLoading(false);
-              })
-      }, []); */
+
     if (loading) {
         return (<h1> cargando...</h1>)
     }
     if (data) {
         return (
-            /*   <Link to={`/${media}/${category}/page/1`}>
-                  <h1>
-                      {media} - {category}
-                  </h1>
-              </Link> */
-
             <div className="categoryPreview-container">
-                <Link to={`/${media}/${category}/page/1`} className="card-container-title">
+                <Link to={`/${media}/${category}/page/1`} className="categoryPreview-title">
 
                     {title}
-                    <FiArrowRight className="arrow" />
+                    <FiArrowRight className="categoryPreview-arrow" />
                 </Link>
-                <CardContainer cards={data.results.slice(0, 5)} media={media} />
+                <CardContainer cards={data.results.slice(0, breackpoint)} media={media} />
 
             </div>
         )

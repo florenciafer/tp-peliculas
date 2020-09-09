@@ -1,0 +1,31 @@
+.search-bar{
+    display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+   background-color: rgb(35, 39, 42);
+   height: 8vh;
+   padding: 0 2rem;
+    position: relative;
+   width: 70%; 
+   @media (max-width: 500px) {
+    width: 100%;
+  }
+   
+}
+.search-input {
+  color:rgb(220, 221, 222);
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  padding: 10px 40px;
+  width: 100%;
+   cursor: pointer;
+}
+
+.search-magnifying-glass{
+    color:rgb(220, 221, 222);
+    width: 28px;
+    height: 28px;
+  
+}

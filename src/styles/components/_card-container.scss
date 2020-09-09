@@ -6,24 +6,13 @@
 .card-container {
   border: 1px solid blue;
   display: flex;
+ margin-right: 2em;
+   width:100%
 
 }
 .card-wrapper {
   display: flex;
   flex-wrap: wrap; 
-  /* margin: 0 0.8rem; */
+  margin: 0 0.8rem;
 }
-.card-container-title {
-  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  display: flex;
-  align-items: center;
- text-decoration: none ;
-  font-size: 1.5rem;
-  color: rgb(220, 221, 222);
-  margin: 1.5rem 0 1.5rem 0.5rem;
-}
-.arrow {
-  color: hsl(207, 90%, 54%);
-  margin-left: 0.5rem;
-}
+

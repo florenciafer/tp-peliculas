@@ -18,8 +18,9 @@ const Search = () => {
   return (
     <div className="search-bar">
       <BsSearch className="search-magnifying-glass" />
-      <input className="search-input" type="text" placeholder="busqueda" value={value}
+      <input className="search-input" type="text" placeholder="Búsqueda" value={value}
         onChange={handleChange} onKeyDown={handleKeyDown}></input>
+    
 
     </div>
   );

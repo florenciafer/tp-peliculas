@@ -1,8 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
-
-import InfoPage from "./pages/InfoPage";
 import Header from "./components/Header";
 import Movie from "./pages/Movie";
 import Tv from "./pages/tv";
@@ -12,10 +10,6 @@ import Person from "./pages/persons/Person";
 
 
 function App() {
-  // switch(url)
-  // case "/": home
-  //Router  url setUrl useState
-  // link onClick={setUrl(/)}
   return (
     <Router>
       <Header />

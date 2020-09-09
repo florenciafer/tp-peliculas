@@ -1,36 +1,6 @@
-.search-bar{
- background-color: rgb(35, 39, 42);
-   position: relative;
-     height: 7vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0.2rem;
-   
-}
-.search-input{
-background-color: rgb(35, 39, 42);
-color:rgb(220, 221, 222);
-font-size: medium;
-border: none;
-margin-left: 0.5rem;
-}
-.search-magnifying-glass{
-    color:rgb(220, 221, 222);
-    margin-left: 0.5rem;
-
-}
 .container-header{
-  display: flex;
-}
-.navBar{
-  display: flex;
-  width: 20vw;
-  justify-content: space-around;
-}
-.icon-NavBar{
-  font-size: 2rem;
-  color:hsl(210, 3%, 87%);
-
+    display: flex;
+    flex-direction: row-reverse;
+    width:100%;
+    background-color: rgb(35, 39, 42);
 }

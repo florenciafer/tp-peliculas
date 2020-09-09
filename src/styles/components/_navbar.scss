@@ -1,0 +1,30 @@
+.navBar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+    width: 30%;
+    align-items: center;
+    background-color: rgb(35, 39, 42);
+  @media (max-width: 500px) {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    justify-content: space-around;
+    text-align: center;
+    z-index: 99;
+    background: black;
+    padding: 5px 0px;
+  }
+}
+.icon-NavBar{
+  font-size: 2rem;
+  color:hsl(210, 3%, 87%);
+   font-size: 30px;
+  &:hover {
+    color: rgb(33, 150, 243);;
+  }
+
+}

@@ -4,7 +4,6 @@ import CardContainer from '../Card-Container';
 
 const Similares = ({ media, id }) => {
     const [similar] = useDetail(media, id, "similar");
-    console.log(similar)
     if (similar) {
         return (
             <CardContainer cards={similar.results} media={media} />)

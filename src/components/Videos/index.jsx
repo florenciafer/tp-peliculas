@@ -3,12 +3,11 @@ import useDetail from '../../utils/hooks/useDetail'
 
 const Videos = ({ media, id }) => {
     const [videos] = useDetail(media, id, "videos");
-    console.log(videos)
     if (videos) {
         return (
-            <div>
+            <div className="container-video">
                 {videos.results.map((video) =>
-                    <iframe
+                    <iframe className="video --youtube"
                         id="player"
                         type="text/html"
                         width="640"

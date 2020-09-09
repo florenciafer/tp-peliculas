@@ -4,7 +4,7 @@ import CardContainer from '../Card-Container';
 
 const Reparto = ({ media, id }) => {
     const [credits] = useDetail(media, id, "credits");
-    console.log(credits)
+
     if (credits) {
         return (
             <CardContainer cards={credits.cast} media="person" />

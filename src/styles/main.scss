@@ -1,10 +1,18 @@
 @import "./utils/variables";
+
 @import "./base/reset";
+
+@import "./layout/body";
+@import "layout/header";
+
+
 @import "./components/card";
 @import "./components/card-container";
 @import "./components/details";
 @import "./components/category";
 @import "./components/info";
 @import "./components/categoryPreview";
-@import "./layout/body";
-@import "layout/header";
+@import "./components/search";
+@import "./components/navbar";
+@import "./components/videos";
+@import "./components/person";

@@ -37,7 +37,7 @@ const Category = () => {
     return (
 
       <div className="category-container">
-        <h1 className="card-container-title">{searchParam ? `Genero - ${category}` : title}</h1>
+        <h1 className="categoryPreview-title">{searchParam ? `Genero - ${category}` : title}</h1>
         <CardContainer className="category" cards={data.results} media={media} />
         <Paginado media={media} category={category} page={page} totalPages={data.total_pages} ></Paginado>
       </div>

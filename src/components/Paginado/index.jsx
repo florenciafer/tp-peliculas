@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 const getItems = (current, totalPages, getUrl) => {
-  console.log(current)
+
   const offset = Number(2);
   const aux = [];
 

@@ -16,8 +16,8 @@ const Details = () => {
 
   return (
     <div className="details-hero" >{data &&
-      <div>
-        <div>
+      <div className="details-container">
+        <div className="details-container-bg">
           <img
             src={`https://image.tmdb.org/t/p/original/${data.backdrop_path}`} className="detail-bg"
             alt="imagen details" />
