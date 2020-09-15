@@ -14,8 +14,8 @@ const Person = ({ media }) => {
     return (
         <div>
             <div>
-                <Link to={`${url}/info`}>INFORMACIÓN</Link>
-                <Link to={`${url}/credits`}>CREDITOS</Link>
+                <Link className="nav-bar-detail-text" to={`${url}/info`}>INFORMACIÓN</Link>
+                <Link className="nav-bar-detail-text" to={`${url}/credits`}>CREDITOS</Link>
             </div>
             <Switch>
                 <Route path={`${path}/info`}><InfoPerson media={media} id={id}></InfoPerson></Route>

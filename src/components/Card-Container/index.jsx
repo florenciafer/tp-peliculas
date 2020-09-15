@@ -6,7 +6,15 @@ const CardContainer = ({ cards, media }) => {
     <div className="card-container">
       <div className="card-wrapper">
         {cards.map((card) => {
-          return <Card img={card.poster_path || card.profile_path} title={card.original_title || card.name} key={card.id} id={card.id} media={media} subtitle={card.character} />
+          return <Card
+            img={`https://image.tmdb.org/t/p/w370_and_h556_bestv2${
+              card.poster_path || card.profile_path
+              }`}
+            title={card.original_title || card.name}
+            key={card.id}
+            id={card.id}
+            media={media}
+            subtitle={card.character} />
         })}
       </div>
     </div>
