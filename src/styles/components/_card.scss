@@ -6,6 +6,7 @@
     text-decoration: none;
   display: inline-block;
   position: relative;
+  width: calc(20%);
  @media (max-width:1200px){
    width: 25%;
  }
@@ -34,12 +35,17 @@
 .card-image-container {
   width: 100%;
   margin: auto;
+  height: auto;
   overflow:hidden ;
   position: relative;
+  opacity: 1;
   & :hover{
     transform: scale(1.05);
     transition: 1s;
   }
+}
+.card-title-container{
+  display: flex;
 }
 .card-image {
   width: 100%;

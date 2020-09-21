@@ -13,7 +13,7 @@ const Person = ({ media }) => {
     /*     const [infoPerson] = useDetail("person", id,); */
     return (
         <div>
-            <div>
+            <div className="nav-bar-detail">
                 <Link className="nav-bar-detail-text" to={`${url}/info`}>INFORMACIÓN</Link>
                 <Link className="nav-bar-detail-text" to={`${url}/credits`}>CREDITOS</Link>
             </div>
