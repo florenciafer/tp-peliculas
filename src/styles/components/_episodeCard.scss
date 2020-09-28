@@ -1,0 +1,31 @@
+.episodecard-container{
+    display: flex;
+    flex-direction: column;
+
+}
+.episodecard-img{
+    width: 100%;
+    margin: 1rem 1rem;
+}
+.episodecard-title{
+    display: flex;
+}
+.season-container{
+    max-width: 1400px;
+    margin: 1rem 1rem;
+}
+.season-select{
+    width: 100%;
+    appearance: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+    padding: 3px 31px 3px 16px;
+    margin: 0 1rem;
+    color: rgb(220, 221, 222);
+    border: 1px solid rgb(220, 221, 222);
+    background-color: rgb(35, 39, 42);
+    cursor: pointer;
+    position: relative;
+}

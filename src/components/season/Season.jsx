@@ -1,13 +1,14 @@
 import React from 'react'
 import useDetail from '../../utils/hooks/useDetail'
 import { useHistory, useParams } from 'react-router-dom';
-import EspisodeCard from '../EpisodeCard'
+
 import EpisodeCard from '../EpisodeCard';
 
 const Seasons = ({ id }) => {
     const { season } = useParams();
     const [data] = useDetail("tv", id, "", "es-ES");
-    const [seasonData] = useDetail("tv", id, `season/${season}`, "es,-ES");
+    console.log(data)
+    const [seasonData] = useDetail("tv", id, `season/${season}`, "es-ES");
     const history = useHistory()
 
     const handleSeasonChange = (event) => {
@@ -18,8 +19,8 @@ const Seasons = ({ id }) => {
         const { episodes = [] } = seasonData;
 
         return (
-            <div>
-                <select onChange={handleSeasonChange}>
+            <div className="season-container">
+                <select className="season-select" onChange={handleSeasonChange}>
                     {data.seasons.map((dataSeason) => (
                         <option key={dataSeason.id}
                             value={dataSeason.season_number}>
