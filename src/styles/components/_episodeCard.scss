@@ -1,8 +1,6 @@
 .episodecard-container{
     width: 100%;
-    display: flex;
     flex-flow: row wrap;
-    -webkit-box-pack: justify;
     justify-content: space-between;
     align-items: flex-start;
     padding:1rem;

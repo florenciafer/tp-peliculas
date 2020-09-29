@@ -22,7 +22,7 @@ const getItems = (current, totalPages, getUrl) => {
   for (let indice = lowerLimit; indice <= upperlimit; indice++) {
 
     aux.push(<Link key={`paginado${indice}`} className={`page--item 
-        ${indice === current && "page--item__active"}`} to={getUrl(indice)}>{indice}</Link>);
+        ${indice == current && "page--item__active"}`} to={getUrl(indice)}>{indice}</Link>);
 
   }
   return aux;
@@ -42,7 +42,7 @@ const Paginado = ({ media, category, page, totalPages }) => {
   return <div className="pagination-container">
     <div className="pagination-arrow">
       {before && <Link to={before} > <AiOutlineArrowLeft className="arrow-Paginado" /></Link>}
-      <h3 >{items}</h3>
+      <h3 ></h3>{items}
       {next && <Link to={next}><AiOutlineArrowRight className="arrow-Paginado" /></Link>}
     </div>
 

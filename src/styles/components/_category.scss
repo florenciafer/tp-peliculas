@@ -5,7 +5,10 @@
 .category-container{
     max-width: 1400px;
     width: 100%;
-    padding: 20px;
+    padding: 1rem;
+   @media (max-width:650px){
+  padding: 40px;
+ }
 }
 .category-components{
     justify-content: flex-start;
