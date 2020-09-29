@@ -1,0 +1,52 @@
+.containerCards{
+  
+ @media (max-width:1200px){
+    display: grid;
+  grid-template-columns: 33% 33% 33%;
+  justify-content: space-between;
+ }
+ @media (max-width:1000px){
+       display: grid;
+  grid-template-columns:33% 33% 33%;
+  justify-content: space-between;
+ }
+ @media (max-width:768px){
+      display: grid;
+  grid-template-columns:50% 50%;
+  justify-content: space-between;
+ }
+ @media (max-width: 600px){
+     display: flex;
+     flex-direction: column;
+    width: calc(100%);
+   
+    
+}
+}
+.season-container{
+   width: 100%;
+    display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+    align-items: flex-start;
+}
+.selectContainer {
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+.season-select{
+    width:100%;
+    appearance: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+    padding: 3px 31px 3px 16px;
+    margin: 0.5rem 1rem;
+    margin-left: 2rem;
+    color: rgb(220, 221, 222);
+    border: 1px solid rgb(220, 221, 222);
+    background-color: rgb(35, 39, 42);
+    cursor: pointer;
+    position: relative;
+}

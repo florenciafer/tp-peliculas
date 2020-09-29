@@ -20,15 +20,18 @@ const Seasons = ({ id }) => {
 
         return (
             <div className="season-container">
-                <select className="season-select" onChange={handleSeasonChange}>
-                    {data.seasons.map((dataSeason) => (
-                        <option key={dataSeason.id}
-                            value={dataSeason.season_number}>
-                            Temporada: {dataSeason.season_number}
-                        </option>
-                    ))}
-                </select>
-                <div className="containerEpisode">
+                <div className="selectContainer">
+                    <select className="season-select" onChange={handleSeasonChange}>
+                        {data.seasons.map((dataSeason) => (
+                            <option key={dataSeason.id}
+                                value={dataSeason.season_number}>
+                                Temporada: {dataSeason.season_number}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+
+                <div className="containerCards">
                     {episodes.map((episode) => (
                         <EpisodeCard
                             key={episode.id}
