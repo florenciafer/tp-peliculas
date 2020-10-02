@@ -29,10 +29,11 @@ const Category = () => {
   const { media, category, searchParam, page } = useParams();
   const title = useTitle(media, category);
   const [data, loading, error] = useGet(createURL());
-
-  if (loading) {
-    return (<h1> cargando...</h1>)
-  }
+  /* 
+    if (loading) {
+      return (<div class="preloader"></div>
+      )
+    } */
   if (data) {
     return (
 
