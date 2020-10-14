@@ -7,13 +7,12 @@ const CardContainer = ({ cards, media }) => {
       <div className="card-wrapper">
         {cards.map((card) => {
           return <Card
-            img={`https://image.tmdb.org/t/p/w370_and_h556_bestv2${
-              card.poster_path || card.profile_path
+            img={`https://image.tmdb.org/t/p/w370_and_h556_bestv2${card.poster_path || card.profile_path
               }`}
             title={card.original_title || card.name}
             key={card.id}
             id={card.id}
-            media={media}
+            media={media === "multi" ? card.media_type : media}
             subtitle={card.character} />
         })}
       </div>

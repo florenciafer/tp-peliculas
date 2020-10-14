@@ -1,0 +1,37 @@
+.episodecard-container{
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding:1rem;
+
+}
+.episodecard-img{
+    width: 100%;
+     margin: 1rem 0;
+}
+.episodecard-title{
+    display: flex;
+    color: rgb(220, 221, 222);
+    font-size: 16px;
+    font-weight: 400;
+}
+.espisodecard-subtitle{
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 0px;
+    color: rgb(33, 150, 243);
+    margin-right: 10px;
+    font-weight: 400;
+}
+.episodecard-overview{
+   color: rgb(220, 221, 222);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 0px; 
+}
+.episodecard-info{
+    width: 100%;
+    margin: 1rem 0;
+}

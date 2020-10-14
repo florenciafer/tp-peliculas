@@ -1,0 +1,32 @@
+.pagination-container{
+  display: flex;
+   justify-content: center;
+  align-items: center;
+  padding: 0px;
+}
+.pagination-arrow{
+  display: flex;
+  align-items: center;
+}
+
+.page--item{
+display: flex;
+color: white;
+text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 3px;
+  font-size: 14px;
+  transition: 0.3s;
+  &:hover {
+    background-color: rgb(168, 170, 173);
+  }
+  &__active {
+    background-color:rgb(168, 170, 173);
+  }
+  
+}

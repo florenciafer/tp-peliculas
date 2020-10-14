@@ -4,14 +4,14 @@ import Info from "../Info";
 import Reparto from "../Reparto";
 import Videos from "../Videos";
 import Similares from "../Similares";
-import Season from "../season/Season";
 import useDetail from "../../utils/hooks/useDetail";
+import Seasons from "../season/Season";
 
 const Details = () => {
 
   const { path, url } = useRouteMatch();
   const { media, id } = useParams();
-  const seleccionDetail = media === "movie" ? { url: "videos", title: "VIDEOS", path: <Videos media={media} id={id}  ></Videos> } : { url: "season/1", title: "EPISODIOS", path: <Season media={media} id={id}></Season> };
+  const seleccionDetail = media === "movie" ? { url: "videos", title: "VIDEOS", path: <Videos media={media} id={id}  ></Videos> } : { url: "seasons/1", title: "EPISODIOS", path: <Seasons media={media} id={id}></Seasons> };
   const [data] = useDetail(media, id)
 
   return (
@@ -28,16 +28,17 @@ const Details = () => {
           <Link to={`${url}/${seleccionDetail.url}`} className="nav-bar-detail-text">{seleccionDetail.title}</Link>
           <Link to={`${url}/similares`} className="nav-bar-detail-text">SIMILARES</Link>
         </div>
-        <Route path={`${path}/info`}><Info media={media}
-          id={id}
-        ></Info></Route>
+
+        <Route path={`${path}/info`}><Info media={media} id={id}></Info></Route>
         <Route path={`${path}/cast`}><Reparto media={media} id={id}></Reparto></Route>
-        <Route exact path={`${url}/seasons/:season`}>
-          <Season media={media} seasons={data.seasons} /></Route>
-        <Route exact path={`${url}/videos`}>
+        <Route path={`${url}/seasons/:season`}>
+          <Seasons id={id} /></Route>
+        <Route path={`${url}/videos`}>
           <Videos media={media} id={id} />
         </Route>
         <Route path={`${path}/similares`}><Similares media={media} id={id}></Similares></Route>
+
+
       </div>
 
     }

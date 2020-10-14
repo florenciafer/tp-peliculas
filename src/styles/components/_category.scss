@@ -2,6 +2,24 @@
     display:flex;
    flex-wrap: wrap;
 }
+.category-container{
+    max-width: 1400px;
+    width: 100%;
+    padding: 1rem;
+   @media (max-width:650px){
+  padding: 40px;
+ }
+}
+.category-components{
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-basis: 80%;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    background-color: rgb(54, 57, 63);
+    margin-top: 45px;
+}
+
 .arrow-Paginado{
     color: hsl(210, 3%, 87%);
 }

@@ -1,16 +1,14 @@
 
 .card:link, .card:visited{
   background-color: hsl(220, 8%, 23%);
-  padding: 20px;
+  padding: 0.6rem;
   align-items: flex-start;
     text-decoration: none;
   display: inline-block;
   position: relative;
   width: calc(20%);
- @media (max-width:1200px){
-   width: 25%;
- }
- @media (max-width:1000px){
+
+ @media (max-width:768px){
    width: 33%;
  }
  @media (max-width:650px){
