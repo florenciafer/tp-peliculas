@@ -27,7 +27,7 @@ const CategoryPreview = ({ media, category }) => {
 
 
     if (loading) {
-        return (<div class="preloader"></div>)
+        return (<div className="preloader"></div>)
     }
     if (data) {
         return (
