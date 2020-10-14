@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Header from "./components/Header";
 import Movie from "./pages/Movie";
@@ -14,16 +14,15 @@ function App() {
     <Router>
       <Header />
 
-      <Switch>
-        <Route exact path="/" component={Home}></Route>
-        <Route exact path="/movie" component={Movie}></Route>
-        <Route exact path="/tv" component={Tv}></Route>
-        <Route exact path="/:media/:category/page/:page"><Category /></Route>
-        <Route exact path="/:media/:category/:searchParam/page/:page"><Category /></Route>
-        <Route path="/person/:id"><Person /></Route>
-        <Route path="/:media/:id"><Details /></Route>
 
-      </Switch>
+      <Route exact path="/" component={Home}></Route>
+      <Route exact path="/movie" component={Movie}></Route>
+      <Route exact path="/tv" component={Tv}></Route>
+      <Route exact path="/:media/:category/page/:page"><Category /></Route>
+      <Route exact path="/:media/:category/:searchParam/page/:page"><Category /></Route>
+      <Route path="/person/:id"><Person /></Route>
+      <Route path="/:media/:id"><Details /></Route>
+
     </Router>
   );
 }

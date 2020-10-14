@@ -22,7 +22,7 @@ const getItems = (current, totalPages, getUrl) => {
   for (let indice = lowerLimit; indice <= upperlimit; indice++) {
 
     aux.push(<Link key={`paginado${indice}`} className={`page--item 
-        ${indice == current && "page--item__active"}`} to={getUrl(indice)}>{indice}</Link>);
+        ${indice === current && "page--item__active"}`} to={getUrl(indice)}>{indice}</Link>);
 
   }
   return aux;

@@ -1,5 +1,4 @@
 import React from "react";
-import CardContainer from "../components/Card-Container";
 import CategoryPreview from "../components/CategoryPreview";
 
 const Home = () => {

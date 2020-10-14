@@ -28,16 +28,16 @@ const Details = () => {
           <Link to={`${url}/${seleccionDetail.url}`} className="nav-bar-detail-text">{seleccionDetail.title}</Link>
           <Link to={`${url}/similares`} className="nav-bar-detail-text">SIMILARES</Link>
         </div>
-        <switch>
-          <Route path={`${path}/info`}><Info media={media} id={id}></Info></Route>
-          <Route path={`${path}/cast`}><Reparto media={media} id={id}></Reparto></Route>
-          <Route path={`${url}/seasons/:season`}>
-            <Seasons id={id} /></Route>
-          <Route path={`${url}/videos`}>
-            <Videos media={media} id={id} />
-          </Route>
-          <Route path={`${path}/similares`}><Similares media={media} id={id}></Similares></Route>
-        </switch>
+
+        <Route path={`${path}/info`}><Info media={media} id={id}></Info></Route>
+        <Route path={`${path}/cast`}><Reparto media={media} id={id}></Reparto></Route>
+        <Route path={`${url}/seasons/:season`}>
+          <Seasons id={id} /></Route>
+        <Route path={`${url}/videos`}>
+          <Videos media={media} id={id} />
+        </Route>
+        <Route path={`${path}/similares`}><Similares media={media} id={id}></Similares></Route>
+
 
       </div>
 

@@ -6,7 +6,7 @@ const useGet = (url) => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
 
-    const getData = () => {
+    useEffect(() => {
         setLoading(true);
         Axios.get(url)
             .then(results => {
@@ -15,15 +15,9 @@ const useGet = (url) => {
             })
             .catch(error => {
                 setError(true);
-                setLoading(false);
-            })
-
-    }
-    useEffect(() => {
-        getData()
-
-    }, [url])//criteriodecambio url
+            });
+    }, [url]);
     return [data, loading, error]
-}
+};
 
 export default useGet;
