@@ -9,7 +9,7 @@ const Search = () => {
   const handleChange = (event) => setValue(event.target.value);
   const handleKeyDown = (event) => {
     if (event.keyCode === 13 && value) {
-      history.push(`/multi/${value}/page/1`);
+      history.push(`/multi/${value}/page/1`); setValue("");
     }
   };
 
@@ -20,7 +20,7 @@ const Search = () => {
       <BsSearch className="search-magnifying-glass" />
       <input className="search-input" type="text" placeholder="Búsqueda" value={value}
         onChange={handleChange} onKeyDown={handleKeyDown}></input>
-    
+
 
     </div>
   );

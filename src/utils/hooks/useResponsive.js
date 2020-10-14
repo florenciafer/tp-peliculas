@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 
 const useResponsive = () => {
     const [size, setsize] = useState();
-    console.log(size)
+
     //agregar el elemento window es asincronico 
     //cuando hay un cambio de anchura me  setee en setsize con window.innnerwitdh va a recibir handlewithd
     const handleWidth = () => {

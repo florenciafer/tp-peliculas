@@ -2,6 +2,7 @@ import React from "react";
 import useDetail from "../../utils/hooks/useDetail";
 import { Link } from "react-router-dom";
 import ExternalLinks from "../ExternalLink";
+import Puntaje from "../puntaje";
 
 const Info = ({ media, id }) => {
   const [data] = useDetail(media, id)
@@ -13,7 +14,7 @@ const Info = ({ media, id }) => {
       </div>
       <div className="container-textInfo">
         <h1 className="info-title">{data.title || data.name}</h1>
-        <p className="info-rating"></p>
+        <div className="info-genero"><Puntaje puntuacion={data.vote_average} />{data.vote_average}</div>
         <p className="info-description">
           {data.overview}
         </p>

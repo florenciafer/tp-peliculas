@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useRouteMatch } from "react-router-dom";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 const getItems = (current, totalPages, getUrl) => {
 
@@ -28,10 +28,16 @@ const getItems = (current, totalPages, getUrl) => {
   return aux;
 }
 
-const Paginado = ({ media, category, page, totalPages }) => {
+const Paginado = ({ page, totalPages }) => {
+  const { url } = useRouteMatch();
+  console.log(url)
+  let urlFinal = url.split("/");
+  urlFinal.pop();
+  urlFinal = urlFinal.join("/");
+
   const getUrl = (numPage) => {
-    return `/${media}/${category}/page/${numPage}`;
-  }
+    return `${urlFinal}/${numPage}`;
+  };
 
 
   const before = page > 1 ? getUrl(Number(page) - 1) : null;
@@ -42,7 +48,7 @@ const Paginado = ({ media, category, page, totalPages }) => {
   return <div className="pagination-container">
     <div className="pagination-arrow">
       {before && <Link to={before} > <AiOutlineArrowLeft className="arrow-Paginado" /></Link>}
-      <h3 ></h3>{items}
+      {items}
       {next && <Link to={next}><AiOutlineArrowRight className="arrow-Paginado" /></Link>}
     </div>
 
