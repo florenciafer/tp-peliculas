@@ -1,8 +1,8 @@
 import React from 'react'
 import useDetail from '../../utils/hooks/useDetail'
 
-const Videos = ({ media, id }) => {
-    const [videos] = useDetail(media, id, "videos");
+const Videos = ({ media, id, language }) => {
+    const [videos] = useDetail(media, id, "videos", language);
     if (videos) {
         return (
             <div className="container-video">
@@ -13,6 +13,7 @@ const Videos = ({ media, id }) => {
                         width="640"
                         height="360"
                         src={`http://www.youtube.com/embed/${video.key}`}
+
                         frameborder="0"
                         title={video.name}
                     />

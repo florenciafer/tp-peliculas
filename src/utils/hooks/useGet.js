@@ -2,22 +2,25 @@ import { useState, useEffect } from 'react';
 import Axios from "axios";
 
 const useGet = (url) => {
+    const [isLoading, setIsLoading] = useState(false);
+    const [isError, setIsError] = useState(false);
     const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(false);
 
     useEffect(() => {
-        setLoading(true);
+        setIsLoading(true);
         Axios.get(url)
-            .then(results => {
+            .then((results) => {
                 setData(results.data);
-                setLoading(false);
+                setIsLoading(false);
             })
-            .catch(error => {
-                setError(true);
+            .catch((error) => {
+                setIsError(true);
+                setIsLoading(false);
             });
     }, [url]);
-    return [data, loading, error]
+
+    return [data, isLoading, isError];
 };
+
 
 export default useGet;
