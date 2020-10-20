@@ -34,8 +34,9 @@
    justify-content: flex-start;
     align-items: flex-start;
       @media (min-width:375px) {
-    padding-bottom: 2px;
+    padding-bottom: 3rem;
     padding-top:0;
+    padding-left: 3rem;
   }
   @media (min-width:768px) {
     padding-bottom: 0;
