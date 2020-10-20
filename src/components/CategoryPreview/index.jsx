@@ -31,15 +31,18 @@ const CategoryPreview = ({ media, category }) => {
     }
     if (data) {
         return (
-            <div className="categoryPreview-container">
-                <Link to={`/${media}/${category}/page/1`} className="categoryPreview-title">
+            <div className="containerGeneral-preview">
+                <div className="categoryPreview-container">
+                    <Link to={`/${media}/${category}/page/1`} className="categoryPreview-title">
 
-                    {title}
-                    <FiArrowRight className="categoryPreview-arrow" />
-                </Link>
-                <CardContainer cards={data.results.slice(0, breackpoint)} media={media} />
+                        {title}
+                        <FiArrowRight className="categoryPreview-arrow" />
+                    </Link>
+                    <CardContainer cards={data.results.slice(0, breackpoint)} media={media} />
 
+                </div>
             </div>
+
         )
     }
     return null;

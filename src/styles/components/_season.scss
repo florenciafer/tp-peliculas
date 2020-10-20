@@ -29,6 +29,18 @@
    flex-direction: column;
    justify-content: flex-start;
     align-items: flex-start;
+      @media (min-width:375px) {
+    padding-bottom: 2px;
+    padding-top:0;
+  }
+  @media (min-width:768px) {
+    padding-bottom: 0;
+    padding-top:0;
+  }
+  @media (min-width:1024px) {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
 }
 .selectContainer {
   margin-right: 30px;

@@ -5,7 +5,7 @@ const Credits = ({ id }) => {
     const [credits] = useDetail("person", id, "combined_credits");
     if (credits) {
         return (
-            <CardContainer cards={credits.cast} media="person" />)
+            <CardContainer cards={credits.cast} media="multi" />)
     }
     return null
 }
