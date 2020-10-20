@@ -1,16 +1,12 @@
-.categoryPreview-container{
-    max-width: 1400px;
-    width: 100%;
-    padding-top: 2.5em;
-}
+
 .categoryPreview-title {
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   text-decoration: none ;
   font-size: 1.2rem;
   color: rgb(220, 221, 222);
-  margin: 1rem 0 1.5rem 1.5rem;
-   
+  margin-left: 0.4em;
+ 
 }
 .categoryPreview-arrow{
   color: hsl(207, 90%, 54%);
@@ -18,4 +14,23 @@
   vertical-align: middle;
   margin-left:0.4rem;
   
+}
+.categoryPreview-container{
+  max-width: 1440p;
+  padding-top: 60px;
+  padding-bottom: 3rem;
+  @media (min-width:375px) {
+    padding-bottom: 2px;
+    padding-top:0;
+    padding-left: 4rem;
+  }
+  @media (min-width:768px) {
+    padding-bottom: 0;
+    padding-top:0;
+    padding-left: 0;
+  }
+  @media (min-width:1024px) {
+    padding-bottom: 1rem;
+    padding-top: 0;
+  }
 }
