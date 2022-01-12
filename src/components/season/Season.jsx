@@ -21,7 +21,7 @@ const Seasons = ({ id }) => {
         return (
             <div className="season-container">
                 <div className="selectContainer">
-                    <select className="season-select" onChange={handleSeasonChange}>
+                    <select className="season-select" onChange={handleOnChange}>
                         {data.seasons.map((dataSeason) => (
                             <option className="season-select" key={dataSeason.id}
                                 value={dataSeason.season_number}>
