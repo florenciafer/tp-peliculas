@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/tp-peliculas/static/css/main.31344e58.chunk.css",
+    "main.js": "/tp-peliculas/static/js/main.f52c5f89.chunk.js",
+    "main.js.map": "/tp-peliculas/static/js/main.f52c5f89.chunk.js.map",
+    "runtime-main.js": "/tp-peliculas/static/js/runtime-main.1d933549.js",
+    "runtime-main.js.map": "/tp-peliculas/static/js/runtime-main.1d933549.js.map",
+    "static/js/2.0e285faa.chunk.js": "/tp-peliculas/static/js/2.0e285faa.chunk.js",
+    "static/js/2.0e285faa.chunk.js.map": "/tp-peliculas/static/js/2.0e285faa.chunk.js.map",
+    "index.html": "/tp-peliculas/index.html",
+    "precache-manifest.ce1368a471c1a5838a56b7a1997be06a.js": "/tp-peliculas/precache-manifest.ce1368a471c1a5838a56b7a1997be06a.js",
+    "service-worker.js": "/tp-peliculas/service-worker.js",
+    "static/css/main.31344e58.chunk.css.map": "/tp-peliculas/static/css/main.31344e58.chunk.css.map",
+    "static/js/2.0e285faa.chunk.js.LICENSE.txt": "/tp-peliculas/static/js/2.0e285faa.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1d933549.js",
+    "static/js/2.0e285faa.chunk.js",
+    "static/css/main.31344e58.chunk.css",
+    "static/js/main.f52c5f89.chunk.js"
+  ]
+}
