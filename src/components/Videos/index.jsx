@@ -12,17 +12,16 @@ const Videos = ({ media, id, language }) => {
                         type="text/html"
                         width="640"
                         height="360"
-                        src={`https://www.youtube.com/embed/${video.key}`}
-
+                        src={video.key ?`https://www.youtube.com/embed/${video.key}` : `https://www.youtube.com/watch?v=TURbeWK2wwg`  }                     
                         frameborder="0"
-                        title={video.name}
+                        title={video.name ? video.name : "Hola Mundo"}
                     />
 
                 )}
 
             </div>
         )
-    }
+    }else
 
     return null
 }

@@ -2,11 +2,10 @@
   width: 70px;
   height: 70px;
   display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: stretch;
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
   border: 10px solid #eee;
   border-top: 10px solid #666;
   border-radius: 50%;

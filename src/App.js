@@ -12,10 +12,11 @@ import Person from "./pages/persons/Person";
 function App() {
   return (
     <Router>
-      <Header />
+      
+      <Route exact path="/" component={Home}></Route>
 
       <Switch>
-        <Route exact path="/" component={Home}></Route>
+        
         <Route exact path="/movie" component={Movie}></Route>
         <Route exact path="/tv" component={Tv}></Route>
         <Route exact path="/:media/:category/page/:page"><Category /></Route>

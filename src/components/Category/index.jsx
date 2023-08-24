@@ -31,7 +31,7 @@ const Category = () => {
   const [data, loading] = useGet(createURL());
 
   if (loading) {
-    return (<div class="preloader"></div>
+    return (<div className="preloader"></div>
     )
   }
   if (data) {
